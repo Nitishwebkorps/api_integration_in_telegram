@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<div data-controller="geolocation"></div>
+
+
+<hr>
+
+<h3>For Group Message in Telegram </h3>
+<%= form_tag send_mesg_path, method: :post do %>
+  <%= text_field_tag :content, nil, required: true %>
+  <%= submit_tag "Type Message"%>
+<%end%>
+
+<h3>For Private Bot Message in Telegram </h3>
+<%= form_tag send_private_message_path, method: :post do %>
+  <%= text_field_tag :content, nil, required: true %>
+  <%= submit_tag "Type Message"%>
+<%end%>
